@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MOV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,107 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okw-F8-XRK">
+                                <rect key="frame" x="400" y="200" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Fqo-TG-Cfg"/>
+                                    <constraint firstAttribute="width" constant="200" id="Qfq-oi-Ezx"/>
+                                    <constraint firstAttribute="width" secondItem="okw-F8-XRK" secondAttribute="height" multiplier="1:1" id="gVM-Hr-0jB"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="ForwardButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fqo-TG-Cfg"/>
+                                        <exclude reference="Qfq-oi-Ezx"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="touch_up_play:" destination="vXZ-lx-hvc" eventType="touchDown" id="0rj-iK-dxT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsD-q2-qws">
+                                <rect key="frame" x="400" y="400" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2Wh-1C-gLj"/>
+                                    <constraint firstAttribute="width" secondItem="wsD-q2-qws" secondAttribute="height" multiplier="1:1" id="Qsy-4t-pzu"/>
+                                    <constraint firstAttribute="width" constant="200" id="bVW-VI-3Fb"/>
+                                </constraints>
+                                <state key="normal" image="ExitButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2Wh-1C-gLj"/>
+                                        <exclude reference="bVW-VI-3Fb"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ED9-bv-A4C">
+                                <rect key="frame" x="400" y="0.0" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="V4p-Hu-dkd"/>
+                                    <constraint firstAttribute="width" constant="200" id="mDG-5E-HEI"/>
+                                    <constraint firstAttribute="width" secondItem="ED9-bv-A4C" secondAttribute="height" multiplier="1:1" id="uNo-yx-v5v"/>
+                                </constraints>
+                                <state key="normal" image="BackButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="V4p-Hu-dkd"/>
+                                        <exclude reference="mDG-5E-HEI"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="rewind:" destination="vXZ-lx-hvc" eventType="touchDown" id="HhH-1z-9Em"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3X-DI-8Jw">
+                                <rect key="frame" x="-7" y="578" width="408" height="2"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="okw-F8-XRK" firstAttribute="height" secondItem="wsD-q2-qws" secondAttribute="height" id="6jB-x4-LYY"/>
+                            <constraint firstAttribute="trailing" secondItem="wsD-q2-qws" secondAttribute="trailing" id="F4v-dX-9UI"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wsD-q2-qws" secondAttribute="bottom" id="JMt-la-s4p"/>
+                            <constraint firstAttribute="trailing" secondItem="okw-F8-XRK" secondAttribute="trailing" id="Mr7-bc-Ogp"/>
+                            <constraint firstItem="wsD-q2-qws" firstAttribute="leading" secondItem="M3X-DI-8Jw" secondAttribute="trailing" constant="129" id="PwA-r1-PCc"/>
+                            <constraint firstItem="ED9-bv-A4C" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="TDv-aY-CM0"/>
+                            <constraint firstItem="okw-F8-XRK" firstAttribute="width" secondItem="wsD-q2-qws" secondAttribute="width" id="WL7-Uh-AVU"/>
+                            <constraint firstItem="okw-F8-XRK" firstAttribute="top" secondItem="ED9-bv-A4C" secondAttribute="bottom" id="eXg-sB-A6E"/>
+                            <constraint firstItem="M3X-DI-8Jw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="105" id="iu3-5p-sPq"/>
+                            <constraint firstItem="ED9-bv-A4C" firstAttribute="width" secondItem="okw-F8-XRK" secondAttribute="width" id="pPo-xh-g1j"/>
+                            <constraint firstAttribute="trailing" secondItem="ED9-bv-A4C" secondAttribute="trailing" id="qxZ-qn-EsC"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="M3X-DI-8Jw" secondAttribute="bottom" constant="8" symbolic="YES" id="uCa-ck-UHG"/>
+                            <constraint firstItem="ED9-bv-A4C" firstAttribute="height" secondItem="okw-F8-XRK" secondAttribute="height" id="uR0-TQ-y4J"/>
+                            <constraint firstItem="wsD-q2-qws" firstAttribute="top" secondItem="okw-F8-XRK" secondAttribute="bottom" id="vxH-Fe-Frt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressBar" destination="M3X-DI-8Jw" id="kfX-iK-4PF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="322"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="lHn-ev-vKs">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="jCY-8c-gTC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLM-P9-YAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="310"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BackButton" width="678" height="639"/>
+        <image name="ExitButton" width="678" height="639"/>
+        <image name="ForwardButton" width="678" height="639"/>
+    </resources>
 </document>
