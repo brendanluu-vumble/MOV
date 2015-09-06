@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A87505A1B9BC59A00E9A9F9 /* dronefish.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A8750591B9BC50A00E9A9F9 /* dronefish.mp4 */; };
 		C9A326AF1B9B5C11009C49D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A326AE1B9B5C11009C49D1 /* AppDelegate.swift */; };
 		C9A326B11B9B5C11009C49D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A326B01B9B5C11009C49D1 /* ViewController.swift */; };
 		C9A326B41B9B5C11009C49D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A326B21B9B5C11009C49D1 /* Main.storyboard */; };
@@ -14,8 +15,6 @@
 		C9A326B91B9B5C11009C49D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A326B71B9B5C11009C49D1 /* LaunchScreen.xib */; };
 		C9A326C51B9B5C12009C49D1 /* MOVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A326C41B9B5C12009C49D1 /* MOVTests.swift */; };
 		C9A326D01B9B6913009C49D1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A326CF1B9B6913009C49D1 /* MediaPlayer.framework */; };
-		C9A326D21B9B7218009C49D1 /* dronefish.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9A326D11B9B7218009C49D1 /* dronefish.mp4 */; };
-		C9A326D41B9B8CD4009C49D1 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A326D31B9B8CD4009C49D1 /* black.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A8750591B9BC50A00E9A9F9 /* dronefish.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dronefish.mp4; sourceTree = "<group>"; };
 		C9A326A91B9B5C11009C49D1 /* MOV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A326AD1B9B5C11009C49D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9A326AE1B9B5C11009C49D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,8 +40,6 @@
 		C9A326C31B9B5C12009C49D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9A326C41B9B5C12009C49D1 /* MOVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOVTests.swift; sourceTree = "<group>"; };
 		C9A326CF1B9B6913009C49D1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		C9A326D11B9B7218009C49D1 /* dronefish.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dronefish.mp4; path = ../dronefish.mp4; sourceTree = "<group>"; };
-		C9A326D31B9B8CD4009C49D1 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = ../../../Downloads/black.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 		C9A326A01B9B5C11009C49D1 = {
 			isa = PBXGroup;
 			children = (
-				C9A326D11B9B7218009C49D1 /* dronefish.mp4 */,
 				C9A326CF1B9B6913009C49D1 /* MediaPlayer.framework */,
 				C9A326AB1B9B5C11009C49D1 /* MOV */,
 				C9A326C11B9B5C12009C49D1 /* MOVTests */,
@@ -86,6 +83,7 @@
 		C9A326AB1B9B5C11009C49D1 /* MOV */ = {
 			isa = PBXGroup;
 			children = (
+				3A8750591B9BC50A00E9A9F9 /* dronefish.mp4 */,
 				C9A326B01B9B5C11009C49D1 /* ViewController.swift */,
 				C9A326B21B9B5C11009C49D1 /* Main.storyboard */,
 				C9A326AC1B9B5C11009C49D1 /* Supporting Files */,
@@ -96,7 +94,6 @@
 		C9A326AC1B9B5C11009C49D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C9A326D31B9B8CD4009C49D1 /* black.png */,
 				C9A326B71B9B5C11009C49D1 /* LaunchScreen.xib */,
 				C9A326AE1B9B5C11009C49D1 /* AppDelegate.swift */,
 				C9A326B51B9B5C11009C49D1 /* Images.xcassets */,
@@ -204,9 +201,8 @@
 			files = (
 				C9A326B41B9B5C11009C49D1 /* Main.storyboard in Resources */,
 				C9A326B91B9B5C11009C49D1 /* LaunchScreen.xib in Resources */,
-				C9A326D21B9B7218009C49D1 /* dronefish.mp4 in Resources */,
+				3A87505A1B9BC59A00E9A9F9 /* dronefish.mp4 in Resources */,
 				C9A326B61B9B5C11009C49D1 /* Images.xcassets in Resources */,
-				C9A326D41B9B8CD4009C49D1 /* black.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +417,7 @@
 				C9A326CA1B9B5C12009C49D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9A326CB1B9B5C12009C49D1 /* Build configuration list for PBXNativeTarget "MOVTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +426,7 @@
 				C9A326CD1B9B5C12009C49D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,6 +16,7 @@ class ViewController: UIViewController {
    // var fileURL = NSURL(fileURLWithPath:NSBundle.mainBundle().pathForResource("dronefish", ofType:"mp4")!)
     
     
+    @IBOutlet weak var rewindButton: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
     
    // let fileURL = NSBundle.mainBundle().URLForResource("dronefish", withExtension: "mp4")
@@ -23,8 +24,12 @@ class ViewController: UIViewController {
     var moviePlayer : MPMoviePlayerController!
     var globalPlayer : MPMoviePlayerController!
     
+    var screenWidth = (UIScreen.mainScreen().bounds.width)
+    var screenHeight = (UIScreen.mainScreen().bounds.height)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        screenWidth = screenWidth - rewindButton.frame.size.width
         let transform = CGAffineTransformMakeScale;
         progressBar.transform = CGAffineTransformScale(progressBar.transform, 1.9, 50)
         
@@ -43,6 +48,21 @@ class ViewController: UIViewController {
             self.view.addSubview(player.view)
             var timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "watcher:", userInfo: player, repeats: false)
         }
+        var DynamicView=UIView(frame: CGRectMake(0, 0, screenWidth/3, screenHeight))
+
+        DynamicView.backgroundColor=UIColor.blackColor()
+        
+        self.view.addSubview(DynamicView)
+        var DynamicView2=UIView(frame: CGRectMake(screenWidth/3, 0, screenWidth/3, screenHeight))
+        DynamicView2.backgroundColor=UIColor.whiteColor()
+        
+        self.view.addSubview(DynamicView2)
+        var DynamicView4=UIView(frame: rewindButton.frame)
+        DynamicView4.backgroundColor=UIColor.whiteColor()
+        self.view.addSubview(DynamicView4)
+        var DynamicView3=UIView(frame: CGRectMake(2*screenWidth/3, 0, screenWidth/3, screenHeight))
+        DynamicView3.backgroundColor=UIColor.greenColor()
+        self.view.addSubview(DynamicView3)
         
         
         // First, get the location of the touch
@@ -89,11 +109,15 @@ class ViewController: UIViewController {
         //}
     }*/
     
+    
+    
+    
+    
     @IBAction func touch_up_play(sender: AnyObject)
     {
         
         globalPlayer.pause()
-        globalPlayer.currentPlaybackTime = globalPlayer.currentPlaybackTime + 0.1;
+        globalPlayer.currentPlaybackTime = globalPlayer.currentPlaybackTime + 0.2;
         //rewinding = false
         //globalPlayer.endSeeking()
         //globalPlayer.pause()

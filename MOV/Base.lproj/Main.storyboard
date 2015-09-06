@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Vn-YD-sfg">
+                                <rect key="frame" x="92" y="-29" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okw-F8-XRK">
                                 <rect key="frame" x="400" y="200" width="200" height="200"/>
                                 <constraints>
@@ -81,6 +85,7 @@
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="okw-F8-XRK" firstAttribute="height" secondItem="wsD-q2-qws" secondAttribute="height" id="6jB-x4-LYY"/>
                             <constraint firstAttribute="trailing" secondItem="wsD-q2-qws" secondAttribute="trailing" id="F4v-dX-9UI"/>
@@ -97,22 +102,23 @@
                             <constraint firstItem="ED9-bv-A4C" firstAttribute="height" secondItem="okw-F8-XRK" secondAttribute="height" id="uR0-TQ-y4J"/>
                             <constraint firstItem="wsD-q2-qws" firstAttribute="top" secondItem="okw-F8-XRK" secondAttribute="bottom" id="vxH-Fe-Frt"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Z4H-aa-SCV" appends="YES" id="dCx-wh-I7W"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="progressBar" destination="M3X-DI-8Jw" id="kfX-iK-4PF"/>
+                        <outlet property="rewindButton" destination="ED9-bv-A4C" id="9zd-WM-pfS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Z4H-aa-SCV">
+                    <connections>
+                        <action selector="onHold:" destination="vXZ-lx-hvc" id="b2U-AF-xWX"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="380" y="322"/>
-        </scene>
-        <!--AV Player View Controller-->
-        <scene sceneID="lHn-ev-vKs">
-            <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="jCY-8c-gTC" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jLM-P9-YAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1055" y="310"/>
         </scene>
     </scenes>
     <resources>
