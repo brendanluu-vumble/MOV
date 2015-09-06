@@ -18,10 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Vn-YD-sfg">
-                                <rect key="frame" x="92" y="-29" width="300" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okw-F8-XRK">
                                 <rect key="frame" x="400" y="200" width="200" height="200"/>
                                 <constraints>
@@ -80,8 +76,11 @@
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3X-DI-8Jw">
-                                <rect key="frame" x="-7" y="578" width="408" height="2"/>
+                                <rect key="frame" x="0.0" y="550" width="400" height="50"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xqJ-ir-GAj"/>
+                                </constraints>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -91,32 +90,38 @@
                             <constraint firstAttribute="trailing" secondItem="wsD-q2-qws" secondAttribute="trailing" id="F4v-dX-9UI"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wsD-q2-qws" secondAttribute="bottom" id="JMt-la-s4p"/>
                             <constraint firstAttribute="trailing" secondItem="okw-F8-XRK" secondAttribute="trailing" id="Mr7-bc-Ogp"/>
-                            <constraint firstItem="wsD-q2-qws" firstAttribute="leading" secondItem="M3X-DI-8Jw" secondAttribute="trailing" constant="129" id="PwA-r1-PCc"/>
+                            <constraint firstItem="wsD-q2-qws" firstAttribute="leading" secondItem="M3X-DI-8Jw" secondAttribute="trailing" id="PwA-r1-PCc"/>
                             <constraint firstItem="ED9-bv-A4C" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="TDv-aY-CM0"/>
                             <constraint firstItem="okw-F8-XRK" firstAttribute="width" secondItem="wsD-q2-qws" secondAttribute="width" id="WL7-Uh-AVU"/>
+                            <constraint firstItem="M3X-DI-8Jw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="b6H-F6-oix"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="M3X-DI-8Jw" secondAttribute="bottom" id="cI6-0u-hdh"/>
                             <constraint firstItem="okw-F8-XRK" firstAttribute="top" secondItem="ED9-bv-A4C" secondAttribute="bottom" id="eXg-sB-A6E"/>
-                            <constraint firstItem="M3X-DI-8Jw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="105" id="iu3-5p-sPq"/>
+                            <constraint firstItem="M3X-DI-8Jw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="iu3-5p-sPq"/>
                             <constraint firstItem="ED9-bv-A4C" firstAttribute="width" secondItem="okw-F8-XRK" secondAttribute="width" id="pPo-xh-g1j"/>
                             <constraint firstAttribute="trailing" secondItem="ED9-bv-A4C" secondAttribute="trailing" id="qxZ-qn-EsC"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="M3X-DI-8Jw" secondAttribute="bottom" constant="8" symbolic="YES" id="uCa-ck-UHG"/>
                             <constraint firstItem="ED9-bv-A4C" firstAttribute="height" secondItem="okw-F8-XRK" secondAttribute="height" id="uR0-TQ-y4J"/>
                             <constraint firstItem="wsD-q2-qws" firstAttribute="top" secondItem="okw-F8-XRK" secondAttribute="bottom" id="vxH-Fe-Frt"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="iu3-5p-sPq"/>
+                                <exclude reference="uCa-ck-UHG"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Z4H-aa-SCV" appends="YES" id="dCx-wh-I7W"/>
                         </connections>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="progressBar" destination="M3X-DI-8Jw" id="kfX-iK-4PF"/>
                         <outlet property="rewindButton" destination="ED9-bv-A4C" id="9zd-WM-pfS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Z4H-aa-SCV">
-                    <connections>
-                        <action selector="onHold:" destination="vXZ-lx-hvc" id="b2U-AF-xWX"/>
-                    </connections>
-                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Z4H-aa-SCV"/>
             </objects>
             <point key="canvasLocation" x="380" y="322"/>
         </scene>
